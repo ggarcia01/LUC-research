@@ -1,9 +1,9 @@
 '''
 garcia,gil
 created: 12/15/2020
-updated: 12/15/2020
+updated: 12/16/2020
 
-purpose: GUI for DNA bend program
+purpose: GUI for DNA bend program found in dna_bending.py
 
 '''
 

@@ -1,7 +1,7 @@
 '''
 garcia, gil
 created: 10/28/2020
-last updated: 12/3/2020
+last updated: 12/16/2020
 
 purpose: model how the DNA bends under the presence
 of a protein
