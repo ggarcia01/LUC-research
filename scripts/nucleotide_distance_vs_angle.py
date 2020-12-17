@@ -2,9 +2,10 @@
 
 garcia,gil
 created: 12/7/2020
-last updated: 12/14/2020
+last updated: 12/16/2020
 
-purpose: analyzing the bent DNA data
+purpose: currently for analyzing the bent DNA data that is created computationally.
+         to be used for experimental data.
 
 '''
 
@@ -22,7 +23,7 @@ num_of_loops = 5
 
 #input values
 expected_angle = 50
-
+print('Expected Angle:', expected_angle)
 
 
 #distance calculation
@@ -118,6 +119,7 @@ for num in np.linspace(0,90,1000):
 print()
 print('angle that minimizes the Chi Square value is:',best_angle)
 print('chi squared test for best fit angle:',chisquare(angles,[best_angle]*len(angles)   ))
+print('standard deviation:', np.std(angles))
 
 
 #adding 10% error to data
@@ -144,3 +146,4 @@ print('-----------------------------------------')
 print()
 print('angle that minimizes the Chi Square value is:',best_fit_angle)
 print('chi squared test for best fit angle:',chisquare(angles_w_err,[best_fit_angle]*len(angles_w_err)))
+print('standard deviation of angles', np.std(angles_w_err))
