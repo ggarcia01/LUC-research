@@ -85,12 +85,12 @@ def dna_bend(phi_angle,beta_angle):
             #beta angle
             #strand 1
             x1 += [RADIUS * np.sin(theta_rad) ]
-            y1 += [Lo*np.sin(phi_rad) + RADIUS*np.cos(phi_rad)*np.cos(theta_rad) ]
-            z1 += [Lo*np.cos(phi_rad) - RADIUS*np.sin(phi_rad)*np.cos(theta_rad) + z1_offset  ]
+            y1 += [Lo*np.sin(beta_rad) + RADIUS*np.cos(beta_rad)*np.cos(theta_rad) ]
+            z1 += [Lo*np.cos(beta_rad) - RADIUS*np.sin(beta_rad)*np.cos(theta_rad) + z1_offset  ]
             #strand 2
             x2 += [RADIUS * np.sin(theta_rad + np.pi)]
-            y2 += [Lo*np.sin(phi_rad) + RADIUS*np.cos(phi_rad)*np.cos(theta_rad + np.pi)]
-            z2 += [Lo*np.cos(phi_rad) - RADIUS*np.sin(phi_rad)*np.cos(theta_rad + np.pi)  + z2_offset]
+            y2 += [Lo*np.sin(beta_rad) + RADIUS*np.cos(beta_rad)*np.cos(theta_rad + np.pi)]
+            z2 += [Lo*np.cos(beta_rad) - RADIUS*np.sin(beta_rad)*np.cos(theta_rad + np.pi)  + z2_offset]
             '''
 
             '''
