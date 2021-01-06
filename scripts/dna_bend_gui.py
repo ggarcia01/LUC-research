@@ -22,23 +22,23 @@ root = tk.Tk()
 root.title('DNA Bending')
 
 
-root.geometry('900x950')
+root.geometry('800x750')
 root.pack_propagate(False)
 root.resizable(1,1)
 
 
 #frame for tree view
 frame1 = tk.LabelFrame(root,text='Data')
-frame1.place(height = 350, width= 900,relx=0)
+frame1.place(height = 250, width= 800,relx=0)
 
 
 #frame for open file dialog
 file_frame = tk.LabelFrame(root,text ='Open File')
-file_frame.place(height = 200,width =600,rely =0.40,relx = 0)
+file_frame.place(height = 200,width =600,rely =0.38,relx = 0)
 
 #frame for plot widget
 plt_frame = tk.LabelFrame(root, text = 'Plots')
-plt_frame.place(height = 300,width =900,rely = 0.65,relx = 0)
+plt_frame.place(height = 250,width =800,rely = 0.65,relx = 0)
 
 
 #buttons
@@ -130,8 +130,7 @@ def excecute():
 
     df_rows = df.to_numpy().tolist() # turns the dataframe into a list of lists
     for row in df_rows:
-        tv1.insert("", "end", values=row) # inserts each list into the treeview. For parameters see https://docs.python.org/3/library/tkinter.ttk.html#tkinter.ttk.Treeview.insert
-
+        tv1.insert("", "end", values=row) # inserts each list into the treeview
     plt()
     return None
 
@@ -147,7 +146,7 @@ def plt():
     ax1 = figure1.add_subplot(111)
     ax1.set_xlabel('x')
     ax1.set_ylabel('z')
-    ax1.set_title('x vs z')
+    ax1.set_title('x vs z (phi)')
     ax1.plot(df['x1'],df['z1'])
     ax1.plot(df['x2'],df['z2'])
     ax1.axis('equal')
@@ -161,7 +160,7 @@ def plt():
     ax2 = figure2.add_subplot(111)
     ax2.set_xlabel('y')
     ax2.set_ylabel('z')
-    ax2.set_title('y vs z')
+    ax2.set_title('y vs z (beta)')
     ax2.plot(df['y1'],df['z1'])
     ax2.plot(df['y2'],df['z2'])
     ax2.axis('equal')
